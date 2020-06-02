@@ -6,18 +6,19 @@ const useHabitaciones = () => {
         query{
             allDatoCmsHabitacion{
                 nodes{
-                titulo
-                id
-                slug
-                contenido
-                imagen{
-                fluid(maxWidth: 1200){
-                    ...GatsbyDatoCmsFluid
+                    titulo
+                    id
+                    slug
+                    contenido
+                    imagen{
+                        fluid(maxWidth: 1200){
+                            ...GatsbyDatoCmsFluid
+                        }
+                    }
                 }
-                }
-            }
             }
         }
+        
     `)
 
     return data.allDatoCmsHabitacion.nodes.map(habitacion => ({

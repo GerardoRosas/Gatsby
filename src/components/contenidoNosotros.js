@@ -26,15 +26,15 @@ const ContenidoNosotros = () => {
     const infoNosotros = useStaticQuery(graphql`
         query{
             allDatoCmsPagina(filter: { slug: {eq: "nosotros"}}){
-            nodes {
-                titulo
-                contenido
-                imagen{
-                fluid(maxWidth: 1200) {
-                    ...GatsbyDatoCmsFluid
+                nodes {
+                    titulo
+                    contenido
+                    imagen{
+                        fluid(maxWidth: 1200) {
+                            ...GatsbyDatoCmsFluid
+                        }
+                    }
                 }
-                }
-            }
             }
         }
     `)
